@@ -122,23 +122,14 @@ que incluye un analizador sintáctico de expresiones.
 
 ### Interfaz gráfica del programa
 La interfaz gráfica de la aplicación a diseñar imitará la de
-[esta página](https://www.englishclub.com/esl-games/hangman/animals-easy.php),
-una vez clicado el botón *START*, que se tomará como referencia.
-Su aplicación no ha de contemplar el botón de arranque, sino que al inicializarse ha de mostrar ya el juego en
-curso.
+[la aplicación de referencia](https://academo.org/demos/trapezoidal-rule-calculator/)
+pero no incluirá la tabla de la parte inferior de la página que muestra el área de los diferentes trapecios.
+Si lo desea, puede mostrar (a efectos de depuración) esas áreas imprimiéndolas en consola.
 
 También el comportamiento lógico de su aplicación debe imitar a la de referencia.
 
 Utilice libremente los elementos HTML que considere más adecuados para la interfaz gráfica de su aplicación y
-dote de estilo a esos elementos utilizando Bulma.
-
-Sobre un fondo de color gris se representarán las casillas vacías correspondiente a la palabra a adivinar así
-como las casillas correspondientes a cada una de las letras del alfabeto.
-
-Se representará gráficamente el patíbulo, la horca y el ahorcado, para lo cual se propone utilizar los ficheros
-[Hangman-X.png](https://en.wikipedia.org/wiki/File:Hangman-6.png)
-(cambie X por un valor entre 1 y 6) para obtener los 6 ficheros que corresponden con la secuencia del juego).
-Si lo desea, puede Ud. utilizar otras imágenes diferentes de esta propuesta.
+dote de estilo a esos elementos utilizando Bulma para imitar la tipografía y colores de la ULL.
 
 ### Presentación de resultados
 Configure una página GitHub asociada con su repositorio de trabajo que sirva de índice para estas otras
