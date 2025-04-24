@@ -1,4 +1,4 @@
-# Práctica 12. Programación Gráfica Orientada a Objetos y guiada por eventos. El juego del Ahorcado.
+# Práctica 13. Programación Gráfica Orientada a Objetos y guiada por eventos. Calculadora de áreas usando la regla del trapecio.
 ### Factor de ponderación: 10 
 
 ### Examen de la asignatura
@@ -56,6 +56,9 @@ conocimientos que haya adquirido en el uso de patrones de diseño.
 
 * Utilice un fichero distinto para el código de cada una de las clases que intervienen en su programa.
 
+* Previo a la implementación de cada clase, diseñe y desarrolle un conjunto de tests para probar el correcto
+ funcionamiento de todos los métodos públicos.
+
 * Encapsule las clases en módulos que exporten la correspondiete clase hacia otros programas clientes que pudieran utilizarla.
 
 * Todo el código estará ubicado en el directorio `src/home-work` del proyecto. Use subdirectorios de éste si le resulta conveniente.
@@ -69,15 +72,10 @@ o una aplicación similar para realizar un diagrama UML para esas clases, que ha
 * Realice, como siempre, un diseño incremental del programa comprobando cada una de las funcionalidades que añade, siguiendo un
 desarrollo TDD.
 
-* Cuando finalice su desarrollo modifique el fichero `README.md` de su proyecto incluyendo la información habitual en cualquier proyecto público en GitHub. 
+* Cuando finalice su desarrollo **modifique el fichero `README.md`** de su proyecto incluyendo la información habitual en cualquier proyecto público en GitHub. 
 Incluya en ese fichero dos apartados, Building and Running the code y Live Demo. 
 En el primero de ellos ha de explicar en detalle cómo a partir de clonar su repo público ha de compilarse, ejecutarse y desplegarse su aplicación, 
 mientras que en el segundo ha de incluir un enlace (véase el apartado *Presentación de resultados de este documento*) a la URL pública donde deberá estar disponible su aplicación.
-
-### Integración Continua
-Estudie el trabajo expuesto en clase sobre
-[Integración Continua](https://github.com/ULL-ESIT-PAI-2024-2025/2024-2025-pai-ci-2024-2025-pai-ci.git)
-para recordar cómo utilizar GitHub Actions para configurar un flujo de trabajo para su proyecto.
 
 Incluya en su proyecto un fichero de configuración del flujo que permita automatizar la ejecución de las
 diferentes tareas del proyecto.
@@ -93,37 +91,34 @@ conformidad de su código con la Guía de Estilo de Google para TS.
 [GitHub Page](https://pages.github.com/) 
 asociada con el repositorio de su proyecto.
 
-Si hay alguna otra tarea que resulte de interés para su desarrollo, inclúyala igualmente en el flujo.
+### Cálculo de áreas usando la regla del trapecio 
+En esta práctica se propone desarrollar una aplicación TypeScript basada en el patrón MVC.
+La aplicación permitirá el cálculo aproximado del área bajo una curva utilizando la regla del trapecio y
+dispondrá de una interfaz gráfica que permitirá visualizar la aplicación de la regla así como modificar
+algunos parámetros del cálculo.
 
-### El juego del Ahorcado
-En esta práctica se propone desarrollar una aplicación web SPA 
-[(Single Page Application)](https://en.wikipedia.org/wiki/Single-page_application)
-diseñada conforme al patrón Modelo Vista Controlador, que implemente el conocido juego del
-[Ahorcado](https://es.wikipedia.org/wiki/Ahorcado_\(juego\))
+La 
+[regla del trapecio](https://en.wikipedia.org/wiki/Trapezoidal_rule)
+es un método de integración numérica, es decir, un método para calcular aproximadamente el valor de una integral definida. 
+La regla se basa en aproximar el valor de la integral por la suma de las áreas de una serie de trapecios,
+siendo muy fácil calcular el área de un trapecio.
+Cuanto mayor es el número de trapecios, mejor será la aproximación que se consiga para el área.
 
-El juego, conocido en inglés como *Hangman*, es un popular juego de adivinanza que se juega 
-habitualmente con papel y lápiz, aunque también existen versiones digitales, como la que se propone realizar.
+[Esta aplicación](https://academo.org/demos/trapezoidal-rule-calculator/)
+se tomará como referencia para la que se propone desarrollar y en ella dispone de una explicación más
+detallada de la regla del trapecio.
 
-El objetivo del juego es adivinar una palabra secreta que el ordenador ha elegido, 
-antes de que se complete un dibujo de un ahorcado.
+Diseñe su aplicación web como una SPA
+([Single-page application](https://en.wikipedia.org/wiki/Single-page_application))
+de modo que toda la simulación se muestre en el viewport del navegador sin necesidad de usar las barras de scroll.
 
-El ordenador elige una palabra y la escribe en forma de casillas en blanco, donde cada casilla representa 
-una letra de la palabra. 
-Por ejemplo, si la palabra es "goat", se representaría como "_ _ _ _" donde cada guión corresponde con una casilla
-en blanco.
+En su aplicación (y a diferencia de la de referencia), al pulsar el botón 'Update' el valor aproximado del área de la
+curva se imprimirá (*Sum of all Trapezium areas:*) dentro del canvas en el que se visualiza la curva.
 
-El jugador intenta adivinar la palabra, letra por letra. 
-Por cada letra que adivina, el ordenador debe revelar su posición en la palabra si es correcta. 
-Si la letra no está en la palabra, se registra como un intento fallido.
-
-Generalmente, se permite un número limitado de intentos fallidos. 
-Cada intento fallido se representa con una parte del dibujo del ahorcado (cabeza, tronco, brazos, etc.). 
-Si el dibujo se completa antes de que el jugador descubra la palabra, el juego termina y el ordenador gana.
-El juego puede terminar de dos maneras:
-Victoria del jugador: Si el jugador descubre todas las letras de la palabra antes de completar el dibujo del ahorcado.
-Victoria del ordenador: Si el adivinador agota todos sus intentos sin adivinar la palabra.
-
-Utilice para su aplicación un diccionario de palabras que incluya exclusivamente nombres de animales.
+En su aplicación necesitará evaluar una función que es introducida como texto por el usuario (Campo *Expression*).
+Para ello puede resultarle útil usar
+[mathjs](https://mathjs.org/)
+que incluye un analizador sintáctico de expresiones.
 
 ### Interfaz gráfica del programa
 La interfaz gráfica de la aplicación a diseñar imitará la de
@@ -148,7 +143,7 @@ Si lo desea, puede Ud. utilizar otras imágenes diferentes de esta propuesta.
 ### Presentación de resultados
 Configure una página GitHub asociada con su repositorio de trabajo que sirva de índice para estas otras
 páginas de su proyecto:
-* La aplicación *Hangman* que habrá desarrollado. Esa aplicación se configurará como una SPA.
+* La aplicación *Integración* que habrá desarrollado. Esa aplicación se configurará como una SPA.
 * La documentación de la aplicación.
 * El diagrama UML de las clases utilizadas en la aplicación.
 * Una página que albergará el ejercicio que se le pedirá realizar en la sesión de evaluación de esta práctica.
@@ -156,7 +151,7 @@ páginas de su proyecto:
 Todas estas páginas deberán tener un estilo personalizado que imite utilizando Bulma el aspecto (tipografía, colores) de las *páginas ULL*.
 
 ## Referencias
-* [Ahorcado](https://es.wikipedia.org/wiki/Ahorcado_\(juego\))
+* [Trapezoidal Rule Calculator](https://academo.org/demos/trapezoidal-rule-calculator/)
 * [GitHub Actions](https://github.com/features/actions)
 * [GitHub Pages](https://pages.github.com/)
 * [Bulma](https://bulma.io/)

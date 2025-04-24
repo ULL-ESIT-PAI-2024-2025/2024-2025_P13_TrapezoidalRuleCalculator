@@ -1,7 +1,7 @@
 {
-  "name": "Práctica 12 de PAI",
+  "name": "Práctica 13 de PAI",
   "version": "1.0.0",
-  "description": "Hangman Game",
+  "description": "Trapezoidal Rule Calculator",
   "private": true,
   "main": "index.js",
   "scripts": {

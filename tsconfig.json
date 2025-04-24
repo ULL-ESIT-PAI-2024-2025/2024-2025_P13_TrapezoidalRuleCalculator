@@ -1,5 +1,5 @@
 {
-  "display": "Configuration for Hangman Game",
+  "display": "Configuration for Trapezoidal Rule Calculator",
   "compilerOptions": {
     "target": "es2022",
     "module": "commonjs",
