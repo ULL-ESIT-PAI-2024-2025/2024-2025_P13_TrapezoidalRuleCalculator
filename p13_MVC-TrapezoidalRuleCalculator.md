@@ -113,7 +113,8 @@ Diseñe su aplicación web como una SPA
 de modo que toda la simulación se muestre en el viewport del navegador sin necesidad de usar las barras de scroll.
 
 En su aplicación (y a diferencia de la de referencia), al pulsar el botón 'Update' el valor aproximado del área de la
-curva se imprimirá (*Sum of all Trapezium areas:*) dentro del canvas en el que se visualiza la curva.
+curva se imprimirá (*Sum of all Trapezium areas:*) en la página en la parte inferior de la misma, por debajo
+del área ocupada por el canvas.
 
 En su aplicación necesitará evaluar una función que es introducida como texto por el usuario (Campo *Expression*).
 Para ello puede resultarle útil usar
