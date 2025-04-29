@@ -1,4 +1,4 @@
-# Práctica 13. Programación Gráfica Orientada a Objetos y guiada por eventos. Calculadora de áreas usando la regla del trapecio.
+# Práctica 13. Programación de Aplicaciones Interactivas. Calculadora de áreas usando la regla del trapecio.
 ### Factor de ponderación: 10 
 
 ### Examen de la asignatura
